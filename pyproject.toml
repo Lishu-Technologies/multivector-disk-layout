@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multivector-disk-layout"
+version = "0.1.0"
+description = "Offline SSD layout and reversible point IDs for multivector reranking"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26"]
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "Lishu Technologies"}]
+
+[project.optional-dependencies]
+qdrant = ["qdrant-client>=1.20,<2"]
+
+[project.scripts]
+multivector-disk-layout = "multivector_disk_layout.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/Lishu-Technologies/multivector-disk-layout"
+
+[tool.setuptools.packages.find]
+where = ["src"]
